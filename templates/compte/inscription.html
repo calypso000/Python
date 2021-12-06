@@ -1,0 +1,49 @@
+
+<html lang="fr">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/compte.css' %}">
+  <script src="https://kit.fontawesome.com/a076d05399.js"> </script>
+  <script src="{% static 'js/compte.js' %}" defer></script>
+  <title>Mon site - Connexion</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo">
+      <i class="fas fa-user"></i>
+    </div>
+    
+
+    <div class="tab-body" data-id="inscription">
+      <form>
+        <div class="row">
+          <i class="far fa-user"></i>
+          <input type="text" class="input" placeholder="Nom d'utilisateur">
+        </div>
+        <div class="row">
+          <i class="fas fa-lock"></i>
+          <input type="password" class="input" placeholder="Mot de Passe">
+        </div>
+        <div class="row">
+          <i class="fas fa-lock"></i>
+          <input type="password" class="input" placeholder="Confirmer Mot de Passe">
+        </div>
+        <div class="row">
+          <i class="fas fa-envelope-square"></i>
+          <input type="email" class="input" placeholder="adresse e-mail">
+        </div>
+        <button class="btn" type="button">Inscription</button>
+      </form>
+    </div>
+
+    <div class="tab-footer">
+      Vous avez déjà un compte?  <a class="tab-link" href="{% url 'connexion' %}" > Se connecter </a>
+      <a class="tab-link active" data-ref="inscription" href="javascript:void(0)"></a>
+    </div>
+  </div>
+</body>
+
+</html>
